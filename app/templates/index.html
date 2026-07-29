@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+<div class="text-center">
+
+    <h1 class="display-4">
+
+        ¿Dónde está el Secret?
+
+    </h1>
+
+    <p class="lead mt-4">
+
+        Una empresa afirma que eliminó todas las credenciales
+        de su aplicación.
+
+    </p>
+
+    <p>
+
+        ¿Serás capaz de descubrir cómo obtiene el acceso a la base de datos?
+
+    </p>
+
+    <a href="/desafio"
+       class="btn btn-primary btn-lg mt-4">
+
+        Comenzar el Desafío
+
+    </a>
+
+</div>
+
+<hr class="my-5">
+
+<h3>Arquitectura</h3>
+
+<pre>
+Developer
+    │
+GitHub
+    │
+GitHub Actions
+    │
+Application
+    │
+Database
+</pre>
+
+{% endblock %}
