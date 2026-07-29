@@ -1,13 +1,38 @@
 services:
 
+  postgres:
+    image: postgres:17
+
+    container_name: employee-db
+
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: employees
+      POSTGRES_USER: employee_app
+      POSTGRES_PASSWORD: CompanyPortal#2026
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+
   web:
 
     build: ./app
 
-    container_name: donde-esta-el-secret
+    container_name: employee-portal
 
     restart: unless-stopped
 
-    ports:
+    depends_on:
+      - postgres
 
+    ports:
       - "5000:5000"
+
+volumes:
+
+  postgres_data:
