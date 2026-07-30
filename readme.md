@@ -4,11 +4,20 @@ Bienvenido al laboratorio de DojoConf.
 
 Tu misión consiste en encontrar cómo una aplicación obtiene el secreto utilizado para conectarse a la base de datos.
 
-## Objetivos
+## Encuentra el Secreto
 
-- Revisar el código
-- Analizar la arquitectura
-- Buscar credenciales
-- Comprender por qué no aparecen en GitHub
+Un desarrollador publicó accidentalmente este repositorio.
 
-¿Serás capaz de encontrar el secreto?
+La aplicación continúa ejecutándose en producción.
+
+Tu misión es:
+
+- Encontrar credenciales.
+- Identificar cuál sigue siendo válida.
+- Obtener acceso al panel de administración.
+
+NO modifiques el código.
+
+NO ejecutes la aplicación localmente.
+
+Solo analiza el repositorio.

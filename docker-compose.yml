@@ -2,24 +2,23 @@ services:
 
   postgres:
     image: postgres:17
-
     container_name: employee-db
-
     restart: unless-stopped
 
     environment:
       POSTGRES_DB: employees
       POSTGRES_USER: employee_app
       POSTGRES_PASSWORD: CompanyPortal#2026
-   
+
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
 
+    networks:
+      - employee-net
+
   web:
-
     build: ./app
-
     container_name: employee-portal
 
     restart: unless-stopped
@@ -30,6 +29,11 @@ services:
     ports:
       - "5000:5000"
 
-volumes:
+    networks:
+      - employee-net
 
+volumes:
   postgres_data:
+
+networks:
+  employee-net:

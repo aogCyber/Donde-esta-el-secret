@@ -1,7 +1,16 @@
-DB_HOST="postgres"
+DB_HOST = "postgres"
+DB_NAME = "employees"
+DB_USER = "employee_app"
+DB_PASSWORD = "CompanyPortal#2026"
 
-DB_NAME="employees"
+# Secretos encontrados durante una revisión de código
 
-DB_USER="employee_app"
+JWT_SECRET = "jwt-production-2026-internal"
 
-DB_PASSWORD="CompanyPortal#2026"
+INTERNAL_API_KEY = "api-internal-employees"
+
+SERVICE_TOKEN = "svc-payroll-prod"
+
+STORAGE_ACCESS_KEY = "storage-employee-portal"
+
+ADMIN_API_KEY = "dojo-2026-admin-secret"

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+DojoConf 2026 - Employee Administration
+</title>
+
+
+<style>
+
+body {
+
+    font-family: Arial, sans-serif;
+    background: #101820;
+    color: white;
+    margin: 0;
+
+}
+
+
+.banner {
+
+    background: #dc2626;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 12px;
+    text-align: center;
+
+}
+
+
+.banner h1 {
+
+    font-size: 36px;
+
+}
+
+
+.card {
+
+    background: #1e293b;
+    padding: 25px;
+    margin: 20px;
+    border-radius: 12px;
+
+}
+
+
+.success {
+
+    color: #4ade80;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+
+.warning {
+
+    color: #facc15;
+    font-size: 18px;
+
+}
+
+
+.info {
+
+    color: #38bdf8;
+
+}
+
+
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+
+td {
+
+    padding: 12px;
+    border-bottom: 1px solid #334155;
+
+}
+
+
+button {
+
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+
+button:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+.footer {
+
+    text-align: center;
+    color: #94a3b8;
+    margin: 30px;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="banner">
+
+
+<h1>
+🥋 DojoConf 2026
+</h1>
+
+
+<h2>
+🚨 Employee Administration
+</h2>
+
+
+<h2>
+✅ Acceso Administrativo Concedido
+</h2>
+
+
+<p>
+
+Esta aplicación contiene un secreto expuesto dentro del código fuente.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🏆 Secret Challenge - Reto Completado
+</h2>
+
+
+
+<p class="success">
+
+{{ challenge.message }}
+
+</p>
+
+
+
+<table>
+
+
+<tr>
+
+<td>
+🔑 Método de autenticación
+</td>
+
+<td>
+{{ challenge.authentication }}
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+📍 Ubicación del secreto
+</td>
+
+<td>
+{{ challenge.secret_location }}
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+🗄 Acceso a recursos internos
+</td>
+
+<td>
+{{ challenge.database_access }}
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+🚨 Riesgo identificado
+</td>
+
+<td>
+{{ challenge.risk }}
+</td>
+
+</tr>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🖥 Información del Ambiente Productivo
+</h2>
+
+
+
+<table>
+
+
+<tr>
+
+<td>
+🌎 Environment
+</td>
+
+<td>
+{{ stats.environment }}
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+📦 Version
+</td>
+
+<td>
+{{ stats.version }}
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+🗄 Database
+</td>
+
+<td>
+🟢 {{ stats.database }}
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+👥 Employees
+</td>
+
+<td>
+{{ stats.employees }}
+</td>
+
+</tr>
+
+
+
+</table>
+
+
+
+<br>
+
+
+<button>
+
+Export Employees
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+💀 Hallazgo de Seguridad
+</h2>
+
+
+
+<p>
+
+El acceso administrativo fue obtenido utilizando una credencial válida encontrada dentro del repositorio de código.
+
+</p>
+
+
+
+<p>
+
+No fue necesario explotar una vulnerabilidad compleja.
+El secreto estaba expuesto.
+
+</p>
+
+
+
+<p class="warning">
+
+⚠️ Lección aprendida:
+
+<br><br>
+
+Nunca almacenes contraseñas, tokens o llaves API directamente dentro del código fuente.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🥋 DojoConf Security Lesson
+</h2>
+
+
+
+<p class="info">
+
+Código público no significa secretos públicos.
+
+</p>
+
+
+
+<p>
+
+Las aplicaciones deben separar la lógica del código de los secretos utilizados en producción.
+
+</p>
+
+
+
+<p>
+
+La solución no es esconder mejor el secreto.
+La solución es eliminarlo del código.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="footer">
+
+
+<p>
+DojoConf 2026 | Secret Management Challenge
+</p>
+
+
+<p>
+
+"Si está dentro del código, eventualmente será encontrado."
+
+</p>
+
+
+</div>
+
+
+
+
+</body>
+
+
+</html>
