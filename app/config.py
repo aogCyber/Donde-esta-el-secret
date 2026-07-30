@@ -13,4 +13,7 @@ SERVICE_TOKEN = "svc-payroll-prod"
 
 STORAGE_ACCESS_KEY = "storage-employee-portal"
 
+
+
+# Este es el secreto que necesitas, lo agregas despues de /admin?key=dojo-2026...
 ADMIN_API_KEY = "dojo-2026-admin-secret"

@@ -1,53 +1,162 @@
 {% extends "base.html" %}
-
-{% block title %}Inicio{% endblock %}
+{% block title %}¿Dónde está el Secret?{% endblock %}
 
 {% block content %}
 
 <div class="text-center">
 
-    <h1 class="display-4">
+```
+<h1 class="display-4 fw-bold">
+    🔐 ¿Dónde está el Secret?
+</h1>
 
-        ¿Dónde está el Secret?
-
-    </h1>
-
-    <p class="lead mt-4">
-
-        Una empresa afirma que eliminó todas las credenciales
-        de su aplicación.
-
-    </p>
-
-    <p>
-
-        ¿Serás capaz de descubrir cómo obtiene el acceso a la base de datos?
-
-    </p>
-
-    <a href="/desafio"
-       class="btn btn-primary btn-lg mt-4">
-
-        Comenzar el Desafío
-
-    </a>
+<p class="lead mt-3">
+    DojoConf Security Challenge
+</p>
+```
 
 </div>
 
-<hr class="my-5">
+<div class="mt-5">
 
-<h3>Arquitectura</h3>
+```
+<h2>
+    Misión
+</h2>
 
-<pre>
-Developer
-    │
-GitHub
-    │
-GitHub Actions
-    │
-Application
-    │
-Database
-</pre>
+<p class="mt-3">
+    Una aplicación empresarial asegura que sus credenciales están
+    protegidas y que ningún secreto se encuentra expuesto.
+</p>
+
+<p>
+    Tu objetivo es analizar la arquitectura de la aplicación y
+    descubrir cómo obtiene acceso a sus servicios internos.
+</p>
+
+
+<div class="card shadow mt-4">
+
+    <div class="card-body">
+
+        <h4 class="card-title">
+            🎯 Objetivo
+        </h4>
+
+        <p>
+            Identifica dónde reside el secreto, cómo es utilizado
+            por la aplicación y evalúa si el modelo actual cumple
+            con principios modernos de seguridad.
+        </p>
+
+    </div>
+
+</div>
+
+
+<h3 class="mt-5">
+    🔎 Puntos de análisis
+</h3>
+
+
+<ul class="list-group mt-3">
+
+    <li class="list-group-item">
+        💻 <strong>Revisa el código fuente</strong><br>
+        Analiza la lógica de la aplicación y busca referencias
+        a configuraciones sensibles.
+    </li>
+
+
+    <li class="list-group-item">
+        🌎 <strong>Busca variables de entorno</strong><br>
+        Los secretos pueden ser entregados a la aplicación
+        durante el proceso de ejecución.
+    </li>
+
+
+    <li class="list-group-item">
+        🐳 <strong>Analiza Docker</strong><br>
+        Revisa imágenes, contenedores y archivos de despliegue.
+        Los secretos pueden quedar incluidos accidentalmente.
+    </li>
+
+
+    <li class="list-group-item">
+        ☸️ <strong>Inspecciona Kubernetes</strong><br>
+        Observa cómo las aplicaciones reciben configuraciones
+        y credenciales.
+    </li>
+
+
+    <li class="list-group-item">
+        🔐 <strong>Sigue el flujo del secreto</strong><br>
+        Descubre cómo la aplicación obtiene la información que
+        necesita para autenticarse.
+    </li>
+
+</ul>
+
+
+
+<div class="alert alert-info mt-5">
+
+    <h4>
+        💡 Pistas
+    </h4>
+
+
+    <p>
+        <strong>Pista 1:</strong><br>
+        Antes de analizar la infraestructura, revisa qué información
+        está disponible desde la propia aplicación.
+    </p>
+
+
+    <p>
+        <strong>Pista 2:</strong><br>
+        Existe una sección donde puedes revisar información sobre
+        el código utilizado por esta aplicación.
+    </p>
+
+
+    <p>
+        <strong>Pista 3:</strong><br>
+        Busca rutas, archivos o recursos adicionales publicados por
+        la aplicación.
+    </p>
+
+
+    <p>
+        <strong>Pista 4:</strong><br>
+        Los nombres de variables pueden revelar mucho:
+        KEY, TOKEN, PASSWORD, SECRET.
+    </p>
+
+
+    <p>
+        <strong>Pista 5:</strong><br>
+        Pregunta clave:
+        ¿El secreto está protegido o solamente está oculto?
+    </p>
+
+</div>
+
+
+<div class="alert alert-warning mt-4">
+
+    <strong>Recuerda:</strong>
+
+    <br><br>
+
+    Encontrar un secreto no significa romper una aplicación.
+    Muchas veces el mayor riesgo está en cómo las organizaciones
+    almacenan y distribuyen sus credenciales.
+
+</div>
+```
+
+</div>
 
 {% endblock %}
+

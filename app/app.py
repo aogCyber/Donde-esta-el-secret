@@ -48,6 +48,8 @@ def employees():
 
 
 @app.route("/admin")
+
+#Esta es la ruta que debes acceder, ahora solo agregar el admin?key=...el resto puede estar en config.py
 def admin():
 
     key = request.args.get("key")
@@ -121,6 +123,11 @@ def storage():
         return jsonify({"error":"Unauthorized"}),401
 
     return jsonify({"message":"Storage"})
+
+@app.route('/codigo')
+def codigo():
+    # URL del Github publico
+    return render_template("codigo.html")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
